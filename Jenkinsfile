@@ -3,7 +3,7 @@ node{
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github access', url: 'https://github.com/shivi22/java-hello-world-with-maven.git']]])
         }
     stage('Build'){
-        tool 'maven'
+        tool 'Maven3'
         sh 'mvn clean install'
     }
     stage('Hello World'){
